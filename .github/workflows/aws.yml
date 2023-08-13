@@ -61,7 +61,7 @@ jobs:
       with:
         #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        role-to-assume: arn:aws:iam::568777882410:oidc-provider/token.actions.githubusercontent.com #change to reflect your IAM role’s ARN
+        role-to-assume: arn:aws:iam::568777882410:role/GitHubAction-AssumeRoleWithAction #change to reflect your IAM role’s ARN
         role-session-name: GitHub_to_AWS_via_FederatedOIDC
         aws-region: ${{ env.AWS_REGION }}
     - name: Sts GetCallerIdentity
